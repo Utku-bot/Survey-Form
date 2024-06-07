@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Survey Form</title>
@@ -11,7 +15,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <form id="survey-form" action="">
+    <form id="survey-form">
       <div class="form-group">
         <label id="name-label"
           >Name<input
@@ -34,17 +38,19 @@
 
       <div class="form-group">
         <label id="number-label"
-          >Age<input
+          >Age <span> (optional)</span
+          ><input
             min="13"
             max="120"
             required
             type="number"
-            id="number"
+            id="age"
             placeholder="Age"
         /></label>
       </div>
 
       <div class="form-group">
+        <p>Which option best describes your current role?</p>
         <select id="dropdown">
           <option disabled selected value="dropdown-item">
             Select current role
@@ -58,22 +64,33 @@
       </div>
 
       <div class="form-group">
-        <p for="dropdown">
-          <label
-            ><input
-              type="radio"
-              name="dropdown-item"
-              value="1"
-            />Definitely</label
-          >
-          <label
-            ><input type="radio" name="dropdown-item" value="2" />Maybe</label
-          >
-          <label
-            ><input type="radio" name="dropdown-item" value="3" />Not
-            sure</label
-          >
-        </p>
+        <p>Would you recommend freeCodeCamp to a friend?</p>
+        <label
+          ><input
+            type="radio"
+            name="dropdown-item"
+            value="1"
+          />Definitely</label
+        >
+        <label
+          ><input type="radio" name="dropdown-item" value="2" />Maybe</label
+        >
+        <label
+          ><input type="radio" name="dropdown-item" value="3" />Not sure</label
+        >
+      </div>
+
+      <div class="form-group">
+        <p>What is your favorite feature of freeCodeCamp?</p>
+        <select id="dropdown">
+          <option disabled selected value="dropdown-item">
+            Select an option
+          </option>
+          <option value="dropdown-item">Challenges</option>
+          <option value="dropdown-item">Projects</option>
+          <option value="dropdown-item">Community</option>
+          <option value="dropdown-item">Open Source</option>
+        </select>
       </div>
 
       <div class="form-group">
@@ -114,6 +131,7 @@
             id="textarea"
             cols="30"
             rows="10"
+            placeholder="Enter your comment here..."
           ></textarea>
         </p>
       </div>
