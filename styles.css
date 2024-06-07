@@ -5,8 +5,8 @@ body{
   line-height: 1.4;
   margin: 0;
 }
-head{
-    margin: 0;
+#title,#description {
+  
     text-align: center;
 }
 form{
